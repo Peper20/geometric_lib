@@ -188,3 +188,9 @@ float
 - Circle: P = 2πR
 - Rectangle: P = 2a + 2b
 - Square: P = 4a
+
+# Последние изменения
+- `aeb2aec` — add docs to README.md
+- `aeb46db` — add docstrings
+- `c2ba828` — add triangle.py, fix rectangle perimeter
+- `b2bb9e0` — rectangle.py
