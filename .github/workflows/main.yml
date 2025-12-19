@@ -1,18 +1,17 @@
 name: Tests
+
 on: [push, pull_request]
 
 jobs:
-  test:
-    runs-on: ${{ matrix.os }}
+  build:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
-        python-version: ['3.11']
-    
+    runs-on: ${{ matrix.os }} 
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-    
-    - run: python -m unittest discover -s tests -v
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v6.1.0
+        with:
+          python-version: '3.11' 
+
+      - run: python -m unittest discover -s tests -v
